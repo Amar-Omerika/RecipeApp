@@ -10,7 +10,7 @@ const App = () => {
 
 	useEffect(() => {
 		console.log("triggered");
-	}, []);
+	});
 
 	return (
 		<div className="App">
