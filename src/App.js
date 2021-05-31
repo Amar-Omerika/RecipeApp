@@ -7,6 +7,7 @@ const App = () => {
 	const APP_KEY = "33bbcd330b2eb89dc2969873eba80d14";
 
 	const [recipes, setRecipes] = useState([]);
+	const [search, setSearch] = useState("");
 
 	useEffect(() => {
 		getRecipes();
@@ -24,13 +25,14 @@ const App = () => {
 	return (
 		<div className="App">
 			<form className="search-form">
-				<input type="text" className="search-bar" />
+				<input type="text" className="search-bar" value={search} />
 				<button className="search-button" type="submit">
 					Search
 				</button>
 			</form>
 			{recipes.map((recipe) => (
 				<Recipe
+					key={recipe.recipe.lable}
 					title={recipe.recipe.lable}
 					calories={recipe.recipe.calories}
 					image={recipe.recipe.image}
