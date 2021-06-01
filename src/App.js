@@ -19,13 +19,20 @@ const App = () => {
 		);
 		const data = await response.json();
 		setRecipes(data.hits);
+	};
+	const updateSearch = (e) => {
+		setSearch(e.target.value);
 		console.log(data.hits);
 	};
-
 	return (
 		<div className="App">
 			<form className="search-form">
-				<input type="text" className="search-bar" value={search} />
+				<input
+					type="text"
+					className="search-bar"
+					value={search}
+					onChange={updateSearch}
+				/>
 				<button className="search-button" type="submit">
 					Search
 				</button>
