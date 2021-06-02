@@ -39,3 +39,8 @@
 	background-color: #555555;
 	color: white;
 }
+.recipes {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
